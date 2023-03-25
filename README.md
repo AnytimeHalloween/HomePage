@@ -1,2 +1,0 @@
-# Index
-My Home Page
