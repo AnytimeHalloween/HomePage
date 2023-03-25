@@ -1,15 +1,43 @@
-/* タイプセレクタ。pタグ全てに適用される */
-p {
-  color : brown;
+.dropdown{
+  display:none;
 }
 
-/* idセレクタ。指定idを持つタグに適用される */
-#textBox {
-  font-size : 20px;
+label,
+li{
+  display:block;
+  padding:2em;
+  background:gold;
+  border-bottom:#fff 1px solid;
+  font-family:sans-serif;
+  letter-spacing:.05em;
+  font-weight:bold;
 }
-
-/* classセレクタ。class名が一致するタグに適用 */
-.sample-text {
-  background-color : green;
-  color : #fff;  /* 白 */
+li:hover,
+label:hover{
+  background:orange;
+}
+li::before,
+label::before{
+  content:"";
+  display:block;
+  position:absolute;
+  right:5%;
+  width:.5em;
+  height:.5em;
+  border-top:#000 2px solid;
+  border-left:#000 2px solid;
+  transform:rotate(135deg);
+}
+input[type="checkbox"]{
+  display:none;
+}
+label[for="menu"]{
+  display:block;
+  background:orange;
+}
+label[for="menu"]::before{
+  transform:rotate(225deg);
+}
+#menu:checked + .dropdown{
+  display:block;
 }
